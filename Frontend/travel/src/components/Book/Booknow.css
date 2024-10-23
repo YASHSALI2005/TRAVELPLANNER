@@ -1,0 +1,145 @@
+/* Overall layout */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin: 20px 0;
+}
+
+main {
+  padding: 20px;
+}
+
+/* Room selection section */
+.room-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rooms-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Room card styling */
+.room-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.room-card:hover {
+  transform: scale(1.03);
+}
+
+.room-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.room-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.room-info h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.room-info .price {
+  color: #e67e22;
+  font-size: 1.25rem;
+  margin: 10px 0;
+}
+
+.room-info p {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.buttons {
+  margin-top: 10px;
+}
+
+.book-now {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.book-now:hover {
+  background-color: #2980b9;
+}
+
+/* Confirmation section */
+.confirmation {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  text-align: center;
+}
+
+.confirmation h3 {
+  color: #27ae60;
+  margin-bottom: 20px;
+}
+
+.confirm-booking {
+  background-color: #2ecc71;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.confirm-booking:hover {
+  background-color: #27ae60;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .rooms-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .confirmation h3 {
+    font-size: 1.2rem;
+  }
+
+  .book-now, .confirm-booking {
+    width: 100%;
+    padding: 12px 0;
+  }
+}

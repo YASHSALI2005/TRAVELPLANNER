@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #1e40af;
+  --text-color: #1f2937;
+  --light-text: #ffffff;
+  --form-bg: rgb(255, 240, 240);
+  --input-bg: rgba(255, 255, 255, 0.3);
+  --placeholder-color: #000000;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  filter: brightness(0.7);
+}
+
+.overlay {
+  position: relative;
+  z-index: 1;
+  color: var(--light-text);
+  text-align: center;
+  padding: 50px 20px;
+  width: 100%;
+  max-width: 1400px;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  font-weight: 1000;
+  letter-spacing: -0.5px;
+  animation: fadeInDown 1s ease-out;
+}
+.section-titlee {
+  font-size: 3em; /* Increase font size */
+  font-weight: 700; /* Make it bold */
+  text-align: center; /* Center the title */
+  color: var(--text-color); /* Adjust the color as needed */
+  margin-bottom: 10px; /* Add some space below the heading */
+}
+
+
+p {
+  text-align: left;
+  font-size: 1.5rem;
+  color: var(--black-coral);
+  margin-bottom: 1px;
+  line-height: 1.5;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeInDown 1.2s ease-out;
+}
+
+/* Form Styling */
+.trip-form {
+  background: var(--form-bg);
+  padding: 20px 80px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  max-width: 1200px;
+  margin: 0 auto;
+  display: table;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+  animation: slideUpFade 0.8s ease-out;
+}
+
+.form-row {
+  flex: 1;
+  min-width: 200px;
+  position: relative;
+}
+
+label {
+  font-weight: 500;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  display: table-cell;
+  transition: var(--transition);
+}
+
+input[type="text"],
+input[type="date"] {
+  padding: 16px 20px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: var(--input-bg);
+  transition: var(--transition);
+  width: 100%;
+  color: var(--text-color);
+  height: 56px;
+}
+
+input::placeholder {
+  color: var(--placeholder-color);
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+  transform: translateY(-2px);
+}
+
+.form-row:focus-within label {
+  color: var(--primary-color);
+  transform: translateY(-2px);
+  font-size: 2rem;
+}
+
+.planbuttonn {
+  background: linear-gradient(145deg, var(--primary-color), var(--secondary-color));
+  color: var(--light-text);
+  border: none;
+  padding: 0 32px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  height: 56px;
+  min-width: 160px;
+  display: ruby;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.planbuttonn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+}
+
+.planbuttonn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translate(-50%, -50%) rotate(35deg);
+  transition: var(--transition);
+}
+
+.planbuttonn:hover::after {
+  transform: translate(-50%, -50%) rotate(35deg) translateY(-100%);
+}
+
+/* Destination Card Container Styling */
+.destination-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the cards */
+  gap: 40px; /* Gap between cards */
+  padding: 40px 20px;
+}
+
+/* Destination Card Styling */
+.destination-card {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 350px;
+  margin: 20px;
+  text-align: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.destination-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.destination-info {
+  padding: 15px;
+  border-radius: 0 0 20px 20px;
+  position: relative;
+}
+
+.destination-info h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.destination-info p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.destination-info .rating {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.destination-info .rating span {
+  font-size: 14px;
+  color: #004aad;
+  margin-right: 5px;
+}
+
+.destination-info .rating .stars {
+  font-size: 14px;
+  color: #004aad;
+  margin-left: 5px;
+}
+
+.destination-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Style for the star rating and badge */
+.stars {
+  display: inline-block;
+  background-color: #004aad;
+  color: white;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  position: absolute;
+  top: -20px;
+  right: 15px;
+}
+
+.stars::before {
+  content: '★★★★★';
+  font-size: 10px;
+  color: white;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    font-size: 2rem;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.download-app-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 20px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.app-promo-text h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-color);
+}
+
+.app-promo-text p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.mobile-input-container {
+  display: flex;
+  align-items: center;
+}
+
+.flagg-icon {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.mobile-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 250px;
+  font-size: 1rem;
+}
+
+.app-link-btn {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.app-store-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.store-button {
+  width: 150px;
+  margin-right: 15px;
+}
+
+.qr-code {
+  width: 100px;
+}

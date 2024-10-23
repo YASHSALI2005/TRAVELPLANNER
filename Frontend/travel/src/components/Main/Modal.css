@@ -1,0 +1,65 @@
+/* Modal.css */
+
+.modal-overlay {
+    position: fixed; /* Fixed position for overlay */
+    top: 0; /* Cover full height */
+    left: 0; /* Cover full width */
+    right: 0; /* Cover full width */
+    bottom: 0; /* Cover full height */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    display: flex; /* Use flexbox to center content */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    z-index: 1000; /* Make sure it's on top of everything */
+  }
+  
+  .modal-content {
+    background-color: #fff; /* White background for modal */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding around content */
+    width: 400px; /* Set a width for the modal */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    text-align: center; /* Center text */
+  }
+  
+  .modal-content h2 {
+    margin: 0; /* Remove default margin */
+    font-size: 24px; /* Font size for title */
+    color: #333; /* Dark gray color for title */
+  }
+  
+  .modal-content p {
+    margin: 10px 0; /* Space around the paragraph */
+    font-size: 16px; /* Font size for text */
+    color: #555; /* Gray color for text */
+  }
+  
+  .modal-buttons {
+    display: flex; /* Flexbox for button alignment */
+    justify-content: space-around; /* Space buttons evenly */
+    margin-top: 20px; /* Space above buttons */
+  }
+  
+  .modal-buttons button {
+    background-color: #007bff; /* Bootstrap primary blue */
+    color: #fff; /* White text */
+    border: none; /* No border */
+    border-radius: 10px; /* Rounded corners for buttons */
+    padding: 10px 20px; /* Padding for buttons */
+    font-size: 16px; /* Font size for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Transition effect */
+  }
+  
+  .modal-buttons button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  .modal-buttons button:last-child {
+    background-color: #dc3545; /* Bootstrap danger red for Cancel */
+  }
+  
+  .modal-buttons button:last-child:hover {
+    background-color: #c82333; /* Darker red on hover */
+  }
+  

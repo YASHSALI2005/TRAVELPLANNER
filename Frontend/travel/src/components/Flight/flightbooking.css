@@ -1,0 +1,61 @@
+.flight-section {
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background */
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333; /* Dark text color */
+  }
+  
+  .flight-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .flight-card {
+    background: #fff; /* White background */
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    width: 300px; /* Fixed width for uniformity */
+  }
+  
+  .flight-card img {
+    width: 100%; /* Responsive image */
+    border-radius: 15px;
+  }
+  
+  .flight-info {
+    text-align: center;
+  }
+  
+  .price {
+    font-size: 1.5em;
+    color: #28a745; /* Green color for price */
+    margin: 10px 0;
+  }
+  
+  .buttons {
+    margin-top: 20px;
+  }
+  
+  .book-now {
+    background-color: #007BFF; /* Primary button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .book-now:hover {
+    background-color: #0056b3; /* Darker shade for hover */
+  }
+  
