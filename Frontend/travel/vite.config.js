@@ -1,14 +1,16 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
+// Debugging log
+console.log('Vite config loaded!');
+
 export default defineConfig({
-  root: 'Frontend/travel', // Set the root to the travel folder where index.html is located
+  root: 'Frontend/travel',
   plugins: [react()],
   build: {
-    outDir: '../dist', // Adjust the output directory as needed
+    outDir: '../../dist',
     rollupOptions: {
-      input: 'Frontend/travel/index.html', // Specify the correct entry HTML file
+      input: 'Frontend/travel/index.html',
     }
   },
 })
