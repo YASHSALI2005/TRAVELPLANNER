@@ -24,7 +24,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/Login", {
 app.post('/signup', (req, res) => {
     SignupModel.create(req.body)
         .then(members => res.json(members))
-        .catch(err => res.json(err));
+        .catch(err => res.status(500).json({ error: err.message }));
 });
 
 // Login Route
@@ -36,12 +36,13 @@ app.post('/login', (req, res) => {
                 if (user.password === password) {
                     res.json("success");
                 } else {
-                    res.json("this password is incorrect");
+                    res.status(400).json("this password is incorrect");
                 }
             } else {
-                res.json("no record");
+                res.status(404).json("no record found");
             }
-        });
+        })
+        .catch(err => res.status(500).json({ error: err.message }));
 });
 
 // Room Booking Route
