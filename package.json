@@ -1,7 +1,8 @@
 {
   "name": "travelplanner",
   "version": "1.0.0",
-  "scripts": {
-    "build": "cd Frontend && npm install && NODE_ENV=production npx --no-install vite build --config travel/vite.config.js"
-  }
+ "scripts": {
+  "build": "cd Frontend && npm install && npm run build"
+}
+
 }
