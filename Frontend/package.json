@@ -2,7 +2,7 @@
   "name": "travel-frontend",
   "version": "1.0.0",
   "scripts": {
-  "build": "npx vite build --config travel/vite.config.js"
+"build": "./node_modules/.bin/vite build --config travel/vite.config.js"
 },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.0",
