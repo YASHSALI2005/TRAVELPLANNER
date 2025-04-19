@@ -3,12 +3,12 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  root: 'Frontend/travel',  // Correct root for Vite
+  root: 'Frontend/travel',  // Ensure Vite uses the correct root directory
   plugins: [react()],
   build: {
-    outDir: '../../dist', // Ensure the output is placed correctly
+    outDir: '../../dist',  // Make sure to output to the correct location
     rollupOptions: {
-      input: 'Frontend/travel/index.html', // Ensure this points to your correct index.html
+      input: 'Frontend/travel/index.html',  // Ensure this points to your index.html
     }
   },
 })
