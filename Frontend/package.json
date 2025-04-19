@@ -1,9 +1,11 @@
 {
   "name": "travel-frontend",
   "version": "1.0.0",
-  "scripts": {
-"build": "./node_modules/.bin/vite build --config travel/vite.config.js"
-},
+ "scripts": {
+  "postinstall": "chmod +x node_modules/.bin/vite",
+  "build": "vite build --config travel/vite.config.js"
+}
+,
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.0",
     "vite": "^4.5.13"
