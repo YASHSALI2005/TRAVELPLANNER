@@ -1,14 +1,9 @@
+// Frontend/travel/vite.config.js
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  root: '.',  // Relative to Frontend/travel/
-  plugins: [react()],
+  root: './travel', // Set the root to the travel directory
   build: {
-    outDir: '../../dist',
-    emptyOutDir: true,
-    rollupOptions: {
-      input: 'index.html',  // Should resolve to Frontend/travel/index.html
-    },
+    outDir: '../dist', // Adjust output directory if needed
   },
 });
