@@ -6,7 +6,7 @@
   },
   "scripts": {
     "start": "cd Frontend/travel && npx serve dist --listen 10000 --single",
-    "start:backend": "cd Backend && npm run dev",
+    "start:backend": "cd Backend && npm start",
     "start:frontend": "cd Frontend && npm run dev",
     "install:all": "npm install && cd Backend && npm install && cd ../Frontend && npm install --unsafe-perm",
     "build:frontend": "cd Frontend && npm install --unsafe-perm && npm run build",
