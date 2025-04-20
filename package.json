@@ -5,7 +5,8 @@
     "start:backend": "cd Backend && npm run dev",
     "start:frontend": "cd Frontend && npm run dev",
     "install:all": "npm install && cd Backend && npm install && cd ../Frontend && npm install",
-    "build:frontend": "cd Frontend && npm run build"
+    "build:frontend": "cd Frontend && npm run build",
+    "build": "npm run build:frontend"
   },
   "author": "",
   "license": "ISC"
