@@ -77,7 +77,7 @@ const FlightBooking = () => {
     };
 
     try {
-      const response = await axios.post('http://localhost:2000/book-flight', bookingDetails); // Using Axios for the POST request
+      const response = await axios.post('http://localhost:5001/book-flight', bookingDetails); // Using Axios for the POST request
 
       if (response.status === 200) {
         console.log('Flight booking successful:', response.data);

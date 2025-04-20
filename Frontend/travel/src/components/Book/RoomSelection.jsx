@@ -77,7 +77,7 @@ const RoomSelection = () => {
     };
 
     try {
-      const response = await axios.post('http://localhost:2000/bookroom', bookingDetails); // Using Axios for the POST request
+      const response = await axios.post('http://localhost:5001/bookroom', bookingDetails); // Using Axios for the POST request
 
       if (response.status === 200) {
         console.log('Booking successful:', response.data);

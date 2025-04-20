@@ -13,10 +13,7 @@ app.use(express.json());
 app.use(cors());
 
 // MongoDB connection (Replace with Render env variable)
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/Login", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-})
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/LOGIN")
 .then(() => console.log("MongoDB connected"))
 .catch(err => console.error("MongoDB connection error:", err));
 
@@ -72,7 +69,7 @@ app.get("*", (req, res) => {
 });
 
 // Start server
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
