@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "node_modules/.bin/vite build --config travel/vite.config.js",
+    "build": "npx vite build --config travel/vite.config.js",
     "preview": "vite preview --port 5000"
   },
   "devDependencies": {

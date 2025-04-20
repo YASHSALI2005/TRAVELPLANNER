@@ -1,6 +1,9 @@
 {
   "name": "travel-planner",
   "version": "1.0.0",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "start:backend": "cd Backend && npm run dev",
     "start:frontend": "cd Frontend && npm run dev",
