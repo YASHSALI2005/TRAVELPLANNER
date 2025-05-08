@@ -4,7 +4,7 @@ A full-stack travel planning platform that helps users plan their dream vacation
 
 ## ✨ Live Demo
 
-Check out the live demo: [Travel Planner](https://travelplanner-virid.vercel.app)
+Check out the live demo: [Travel Planner](https://travelplanner-5t26.onrender.com/))
 
 ## 🚀 Features
 
