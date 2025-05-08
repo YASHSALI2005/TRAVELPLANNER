@@ -13,7 +13,7 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    axios.post('http://localhost:5001/LOGIN', { email, password })
+    axios.post('http://localhost:5001/login', { email, password })
       .then(result => {
         if (result.data === "success") {
           login(); // Update context to indicate user is authenticated
