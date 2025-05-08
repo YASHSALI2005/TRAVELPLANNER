@@ -1,31 +1,29 @@
 import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../context/AuthContext'; // Import AuthContext
+import { AuthContext } from '../../context/AuthContext';
 import './auth.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
-  const { login } = useContext(AuthContext); // Access login function from context
+  const { login } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
-      axios.post(`${process.env.REACT_APP_API_URL}/login`, { email, password })
-      .then(result => {
-        if (result.data === "success") {
-          login(); // Update context to indicate user is authenticated
-          navigate('/'); // Redirect to home page after successful login
-        } else {
-          setMessage(result.data);
-        }
-      })
-      .catch(err => {
-        console.log(err);
-        setMessage("Error during login");
-      });
+    try {
+      const result = await axios.post(`${process.env.REACT_APP_API_URL}/login`, { email, password });
+      if (result.data === "success") {
+        login();
+        navigate('/');
+      } else {
+        setMessage(result.data);
+      }
+    } catch (err) {
+      setMessage(err.response?.data?.error || "Error during login");
+    }
   };
 
   return (
