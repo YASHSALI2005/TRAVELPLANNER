@@ -14,7 +14,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const result = await axios.post(`${process.env.REACT_APP_API_URL}/login`, { email, password });
+      const result = await axios.post(`${import.meta.env.VITE_API_URL}/login`, { email, password });
       if (result.data === "success") {
         login();
         navigate('/');
